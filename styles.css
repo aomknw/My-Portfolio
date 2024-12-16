@@ -219,14 +219,14 @@ ul li a:hover {
   }
   
   .title {
-    font-size: 1.8rem; /* ลดขนาดฟอนต์ของ title */
-    line-height: 2.3rem;
+    font-size: 1.5rem; /* ลดขนาดของข้อความ title ทั้งหมด */
+    line-height: 2rem; /* ปรับระยะห่างระหว่างบรรทัด */
     text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
   }
-  
-  .title span {
-    font-size: 2rem; /* ลดขนาดฟอนต์ของชื่อ */
-    white-space: nowrap;
 
+  .title span {
+    font-size: 1.8rem; /* ลดขนาดฟอนต์ของชื่อ */
+    white-space: nowrap; /* บังคับให้อยู่ในบรรทัดเดียว */
+    display: inline-block; /* บังคับให้ span เป็นบรรทัดเดียว */
   }
 }
