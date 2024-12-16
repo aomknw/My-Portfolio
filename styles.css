@@ -217,9 +217,16 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
-  .title span {
-    font-size: 2.5rem;
-    white-space: nowrap;
+  
+  .title {
+    font-size: 1.8rem; /* ลดขนาดฟอนต์ของ title */
+    line-height: 2.3rem;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
   }
-}
+  
+  .title span {
+    font-size: 2rem; /* ลดขนาดฟอนต์ของชื่อ */
+    white-space: nowrap;
+
+  }
 }
