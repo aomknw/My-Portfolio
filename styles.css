@@ -125,7 +125,6 @@ ul li a:hover {
 
 .title span {
   font-weight: 600;
-  white-space: nowrap;
 }
 
 .description {
@@ -216,17 +215,5 @@ ul li a:hover {
 
   .action__btns {
     margin: auto;
-  }
-  
-  .title {
-    font-size: 1.5rem; /* ลดขนาดของข้อความ title ทั้งหมด */
-    line-height: 2rem; /* ปรับระยะห่างระหว่างบรรทัด */
-    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-  }
-
-  .title span {
-    font-size: 1.8rem; /* ลดขนาดฟอนต์ของชื่อ */
-    white-space: nowrap; /* บังคับให้อยู่ในบรรทัดเดียว */
-    display: inline-block; /* บังคับให้ span เป็นบรรทัดเดียว */
   }
 }
