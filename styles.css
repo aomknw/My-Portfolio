@@ -217,4 +217,9 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
+  .title span {
+    font-size: 2.5rem;
+    white-space: nowrap;
+  }
+}
 }
