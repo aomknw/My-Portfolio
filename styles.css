@@ -83,7 +83,7 @@ ul li a {
 }
 
 ul li a:hover {
-  border-top-color: var(--secondary-color);
+  border-top-color: var(--secondary-color) #146c94;
   border-bottom-color: var(--secondary-color);
   color: var(--secondary-color);
 }
