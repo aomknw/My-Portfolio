@@ -128,6 +128,7 @@ ul li a:hover {
 }
 
 .description {
+  font-size: 0.875rem;
   line-height: 1.5rem;
   color: var(--text-light);
   margin-bottom: 2rem;
