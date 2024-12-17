@@ -45,12 +45,11 @@ nav {
 nav .logo a {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #0F52BA; /* เปลี่ยนสีเริ่มต้นเป็น #0F52BA */
+  color: var(--primary-color);
   transition: 0.3s;
 }
-
 nav .logo a:hover {
-  color: #0F52BA; /* เปลี่ยนสีเมื่อ hover เป็นสีเดียวกัน */
+  color: var(--primary-color-dark);
 }
 
 nav .checkbox {
