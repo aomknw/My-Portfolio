@@ -150,20 +150,20 @@ ul li a:hover {
   cursor: pointer;
 }
 
-.hire__me {
+.back {
   background-color: var(--primary-color);
   color: #ffffff;
 }
 
-.hire__me:hover {
+.back:hover {
   background-color: var(--primary-color-dark);
 }
 
-.portfolio {
+.next {
   color: var(--primary-color);
 }
 
-.portfolio:hover {
+.next:hover {
   background-color: var(--primary-color-dark);
   color: #ffffff;
 }
