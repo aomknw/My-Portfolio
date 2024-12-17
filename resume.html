@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
-  <link rel="stylesheet" href="style.css"> <!-- เชื่อมกับ CSS -->
-</head>
-<body>
-  <section class="resume">
-    <h1>My Resume</h1>
-    <div class="resume__image">
-      <img src="images/myresume.png" alt="My Resume" style="max-width: 100%; height: auto;">
-    </div>
-  </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Responsive Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Certificates</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h3 class="title">
+            I'm <span>Kanokwan Riamsri<br />a</span> junior university student
+          </h3>
+          <p class="description">
+            Welcome to my portfolio! my name is Kanokwan Riamsri. I am currently a third-year student majoring in Computer Science at the Faculty of Science, Sriracha Campus, Kasetsart University, Sriracha.
+          </p>
+          <div class="action__btns">
+            <button class="back">back</button>
+            <a href="resume.html">
+            <button class="next">next</button>
+            </a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/IMG_6292.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
