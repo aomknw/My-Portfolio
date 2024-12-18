@@ -29,6 +29,43 @@
       </div>
     </nav>
 
+    .section__container {
+        max-width: 800px; /* ความกว้างสูงสุดของ container */
+        margin: 0 auto; /* จัด container ให้อยู่กึ่งกลาง */
+        padding: 20px; /* เพิ่มช่องว่างภายใน */
+      }
+
+      /* จัด layout ของแต่ละใบประกาศนียบัตร */
+      .certificate {
+        text-align: center; /* จัดข้อความและรูปให้อยู่ตรงกลาง */
+        margin-bottom: 40px; /* ระยะห่างระหว่างใบประกาศนียบัตร */
+      }
+
+      /* ทำให้รูปภาพปรับขนาดได้ตามอุปกรณ์ */
+      .certificate img {
+        width: 100%; /* ใช้ความกว้างเต็มของ container */
+        max-width: 400px; /* กำหนดขนาดสูงสุดของรูป */
+        height: auto; /* รักษาสัดส่วนของรูป */
+        display: block; /* แสดงเป็นบล็อกและแก้ปัญหา inline spacing */
+        margin: 0 auto; /* จัดรูปให้อยู่กึ่งกลาง */
+      }
+
+      /* จัดสไตล์ของหัวข้อ */
+      .certificate h2 {
+        font-size: 1.5rem; /* ขนาดตัวอักษร */
+        margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+        color: #333; /* สีตัวอักษร */
+      }
+
+      /* จัดข้อความเพิ่มเติม */
+      .certificate p {
+        font-size: 1rem; /* ขนาดตัวอักษร */
+        color: #555; /* สีตัวอักษรที่อ่อนลง */
+        line-height: 1.6; /* ระยะบรรทัด */
+      }
+    </style>
+  </head>
+  <body>
     <section class="section" id="certificates">
       <div class="section__container">
         <h1>Certificates</h1>
@@ -37,25 +74,39 @@
           <h2>FutureTech Program</h2>
           <p><strong>Topic:</strong> Cloud Computing Skills</p>
           <img src="images/01.jpg" alt="FutureTech Cloud Computing Certificate" />
-          <p><em>Certificate awarded for completing the "Cloud Computing Skills" course under the FutureTech Program on September 8, 2024.</em></p>
+          <p>
+            <em>
+              Certificate awarded for completing the "Cloud Computing Skills" course
+              under the FutureTech Program on September 8, 2024.
+            </em>
+          </p>
         </div>
 
         <div class="certificate">
           <h2>FutureTech Program</h2>
           <p><strong>Topic:</strong> Web Application Design Skills</p>
           <img src="images/02.jpg" alt="FutureTech Web Design Certificate" />
-          <p><em>Certificate awarded for completing the "Web Application Design Skills" course under the FutureTech Program on September 15, 2024.</em></p>
+          <p>
+            <em>
+              Certificate awarded for completing the "Web Application Design Skills" course
+              under the FutureTech Program on September 15, 2024.
+            </em>
+          </p>
         </div>
 
         <div class="certificate">
           <h2>LINK* Certified Network Cabling for Engineering</h2>
           <p><strong>Organized by:</strong> LINK Asia Limited</p>
           <img src="images/03.jpg" alt="Network Cabling Certificate" />
-          <p><em>Certificate awarded by LINK Asia Limited for completing the "Certified Network Cabling for Engineering" training conducted at the Kasetsart University, Sriracha Campus.</em></p>
+          <p>
+            <em>
+              Certificate awarded by LINK Asia Limited for completing the "Certified Network Cabling for Engineering"
+              training conducted at the Kasetsart University, Sriracha Campus.
+            </em>
+          </p>
         </div>
       </div>
     </section>
-
     <section class="section">
       <div class="section__container">
         <div class="content">
