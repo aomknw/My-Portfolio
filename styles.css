@@ -179,6 +179,25 @@ ul li a:hover {
   border-radius: 100%;
 }
 
+.certificate {
+  margin: 20px 0;
+  text-align: center;
+}
+.certificate img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+.certificate h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+.certificate p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
 @media (width < 750px) {
   nav .checkbox {
     display: block;
