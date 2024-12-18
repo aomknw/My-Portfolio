@@ -10,6 +10,54 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
+    <style>
+      /* จัด container ให้กึ่งกลาง */
+      .section__container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* จัดรูปแบบหัวข้อ */
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
+      .resume__image img {
+        width: 100%;
+        max-width: 400px; /* จำกัดความกว้างสูงสุด */
+        height: auto; /* รักษาสัดส่วนของรูป */
+        display: block;
+        margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+        border: 1px solid #ddd; /* เพิ่มเส้นขอบ */
+        border-radius: 5px; /* มุมโค้ง */
+      }
+
+      /* จัดสไตล์ปุ่ม */
+      .action__btns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .action__btns a {
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .action__btns a:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -28,21 +76,18 @@
         </ul>
       </div>
     </nav>
-    
-      <section class="section">
+
+    <section class="section">
       <div class="section__container">
-        <div class="content">
-          <h1>My Resume</h1>
-            <div class="resume__pdf">
-              <embed src="images/resume.pdf" type="application/pdf" width="100%" height="600px"> 
-          <div class="action__btns">
-            <a href="index.html">
-            <button class="back">Back</button>
-            </a>
-            <a href="projects.html">
-            <button class="next">Next</button>
-            </a>
-          </div>
+        <h1>Resume</h1>
+        <!-- รูปภาพแสดง Resume -->
+        <div class="resume__image">
+          <img src="images/resume.jpg" alt="My Resume" />
+        </div>
+        <!-- ปุ่ม Back และ Next -->
+        <div class="action__btns">
+          <a href="index.html" class="back">Back</a>
+          <a href="projects.html" class="next">Next</a>
         </div>
       </div>
     </section>
