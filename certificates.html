@@ -4,60 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__content">
-        <div class="logo"><a href="#">Portfolio</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    .section__container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+    <title>Certificates</title>
+    <style>
+      /* กำหนดความกว้างของ container */
+      .section__container {
+        max-width: 800px; /* กำหนดความกว้างสูงสุด */
+        margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+        padding: 20px; /* เพิ่มช่องว่างรอบ container */
+        text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
       }
 
-    .certificate {
-        text-align: center;
-        margin-bottom: 40px;
+      /* จัดรูปแบบแต่ละใบประกาศนียบัตร */
+      .certificate {
+        margin-bottom: 40px; /* เว้นระยะห่างระหว่างใบ */
       }
 
-    .certificate img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+      /* ทำให้รูปปรับขนาดตามอุปกรณ์ */
+      .certificate img {
+        width: 100%; /* ใช้ความกว้างเต็มพื้นที่ container */
+        max-width: 400px; /* จำกัดความกว้างสูงสุด */
+        height: auto; /* ปรับความสูงให้อัตโนมัติตามอัตราส่วน */
+        display: block; /* จัดให้อยู่ในบล็อก */
+        margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
       }
 
-    .certificate h2 {
+      /* จัดสไตล์ของหัวข้อ */
+      .certificate h2 {
         font-size: 1.5rem;
-        margin-bottom: 10px;
         color: #333;
+        margin-bottom: 10px;
       }
 
-    .certificate p {
+      /* จัดข้อความเพิ่มเติม */
+      .certificate p {
         font-size: 1rem;
         color: #555;
-        line-height: 1.6;
+        line-height: 1.5;
       }
     </style>
   </head>
@@ -66,6 +48,7 @@
       <div class="section__container">
         <h1>Certificates</h1>
 
+        <!-- ใบประกาศนียบัตรที่ 1 -->
         <div class="certificate">
           <h2>FutureTech Program</h2>
           <p><strong>Topic:</strong> Cloud Computing Skills</p>
@@ -78,6 +61,7 @@
           </p>
         </div>
 
+        <!-- ใบประกาศนียบัตรที่ 2 -->
         <div class="certificate">
           <h2>FutureTech Program</h2>
           <p><strong>Topic:</strong> Web Application Design Skills</p>
@@ -90,6 +74,7 @@
           </p>
         </div>
 
+        <!-- ใบประกาศนียบัตรที่ 3 -->
         <div class="certificate">
           <h2>LINK* Certified Network Cabling for Engineering</h2>
           <p><strong>Organized by:</strong> LINK Asia Limited</p>
@@ -100,21 +85,6 @@
               training conducted at the Kasetsart University, Sriracha Campus.
             </em>
           </p>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="section__container">
-        <div class="content">
-            <div class="action__btns">
-              <a href="resume.html">
-                <button class="back">Back</button>
-              </a>
-              <a href="#certificates">
-                <button class="next">Next</button>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
