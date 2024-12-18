@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <h1>My Resume</h1>
+          <div class="resume__pdf">
+            <embed src="resume/myresume.pdf" type="application/pdf" width="100%" height="600px" />
+            <div class="action__btns">
+              <a href="resume.html">
+                <button class="back">Back</button>
+              </a>
+              <a href="#certificates">
+                <button class="next">Next</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certificates">
+      <div class="section__container">
+        <h1>Certificates</h1>
+
+        <div class="certificate">
+          <h2>FutureTech Program</h2>
+          <p><strong>Topic:</strong> Cloud Computing Skills</p>
+          <img src="images/01.jpg" alt="FutureTech Cloud Computing Certificate" />
+          <p><em>Certificate awarded for completing the "Cloud Computing Skills" course under the FutureTech Program on September 8, 2024.</em></p>
+        </div>
+
+        <div class="certificate">
+          <h2>FutureTech Program</h2>
+          <p><strong>Topic:</strong> Web Application Design Skills</p>
+          <img src="images/02.jpg" alt="FutureTech Web Design Certificate" />
+          <p><em>Certificate awarded for completing the "Web Application Design Skills" course under the FutureTech Program on September 15, 2024.</em></p>
+        </div>
+
+        <div class="certificate">
+          <h2>LINK* Certified Network Cabling for Engineering</h2>
+          <p><strong>Organized by:</strong> LINK Asia Limited</p>
+          <img src="images/03.jpg" alt="Network Cabling Certificate" />
+          <p><em>Certificate awarded by LINK Asia Limited for completing the "Certified Network Cabling for Engineering" training conducted at the Kasetsart University, Sriracha Campus.</em></p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
