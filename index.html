@@ -16,32 +16,26 @@
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f7f7f7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
       }
 
       /* จัด container */
       .section__container {
-        max-width: 600px;
-        width: 90%;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 20px;
-      }
-
-      /* รูปภาพ */
-      .image img {
-        max-width: 200px;
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        border: 3px solid #ddd;
-        margin-bottom: 20px;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
       }
 
       /* รูปแบบข้อความ */
+      .content {
+        margin-bottom: 40px;
+      }
+
       .subtitle {
         font-size: 1.5rem;
         color: #555;
@@ -49,7 +43,7 @@
       }
 
       .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #333;
         margin-bottom: 20px;
       }
@@ -59,14 +53,16 @@
       }
 
       .description {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #555;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }
 
-      /* ปุ่ม */
+      /* จัดรูปแบบปุ่ม */
       .action__btns {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
       }
 
@@ -84,32 +80,51 @@
         background-color: #0056b3;
       }
 
+      /* จัดรูปภาพ */
+      .image img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%;
+        border: 3px solid #ddd;
+      }
+
       /* Media Queries */
       @media (min-width: 768px) {
         .section__container {
-          max-width: 800px;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
         }
 
-        .title {
-          font-size: 2.5rem;
-        }
-
-        .description {
-          font-size: 1.2rem;
+        .content {
+          text-align: left;
         }
 
         .image img {
-          max-width: 300px;
+          max-width: 400px;
         }
       }
     </style>
   </head>
   <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Certificates</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <section class="section">
       <div class="section__container">
-        <div class="image">
-          <img src="images/IMG_6293.jpeg" alt="profile" />
-        </div>
         <div class="content">
           <p class="subtitle">HELLO</p>
           <h3 class="title">
@@ -121,6 +136,9 @@
           <div class="action__btns">
             <a href="resume.html" class="next">Next</a>
           </div>
+        </div>
+        <div class="image">
+          <img src="images/IMG_6293.jpeg" alt="profile" />
         </div>
       </div>
     </section>
