@@ -15,13 +15,19 @@
       body {
         margin: 0;
         font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #f7f7f7;
       }
 
       /* กำหนด container */
       .section__container {
         max-width: 800px;
-        margin: 0 auto;
-        padding: 140px 20px 20px;
+        width: 100%;
+        padding: 40px;
         text-align: center;
       }
 
@@ -30,6 +36,7 @@
         font-size: 2rem;
         color: #333;
         margin-bottom: 40px;
+        text-align: center;
       }
 
       /* จัดรูปแบบแต่ละใบประกาศนียบัตร */
@@ -40,7 +47,7 @@
       /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
       .certificate img {
         width: 100%;
-        max-width: 400px;
+        max-width: 600px; /* เพิ่มขนาดให้รูปใหญ่ขึ้น */
         height: auto;
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -69,8 +76,6 @@
         gap: 20px;
         margin-top: 40px;
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
       }
 
       .action__btns a {
@@ -81,8 +86,6 @@
         background-color: #007bff;
         border-radius: 5px;
         transition: background-color 0.3s;
-        flex: 1;
-        text-align: center;
       }
 
       .action__btns a:hover {
@@ -96,7 +99,7 @@
         }
 
         .certificate img {
-          max-width: 600px;
+          max-width: 700px; /* ขยายขนาดรูป */
         }
 
         .action__btns a {
@@ -111,7 +114,7 @@
         }
 
         .certificate img {
-          max-width: 700px;
+          max-width: 800px; /* ขยายขนาดรูป */
         }
 
         .action__btns a {
