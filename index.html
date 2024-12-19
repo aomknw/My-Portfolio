@@ -96,6 +96,16 @@
         background-color: #007bff;
       }
 
+      /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
+      nav ul li a.active {
+        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
+        background-color: transparent; /* ไม่มีพื้นหลัง */
+        border-top: 3px solid #0f52ba;  /* กรอบบน */
+        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
+        border-radius: 0; /* ไม่มีมุมโค้ง */
+        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+      }
+
       /* Media Queries */
       @media (min-width: 768px) {
         .section__container {
