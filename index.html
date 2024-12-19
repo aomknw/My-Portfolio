@@ -31,9 +31,21 @@
         text-align: center;
       }
 
+      /* จัดรูปภาพ */
+      .image {
+        margin-bottom: 40px;
+      }
+
+      .image img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%;
+        border: 3px solid #ddd;
+      }
+
       /* รูปแบบข้อความ */
       .content {
-        margin-bottom: 40px;
+        max-width: 600px;
       }
 
       .subtitle {
@@ -80,28 +92,22 @@
         background-color: #0056b3;
       }
 
-      /* จัดรูปภาพ */
-      .image img {
-        max-width: 300px;
-        height: auto;
-        border-radius: 50%;
-        border: 3px solid #ddd;
-      }
-
       /* Media Queries */
       @media (min-width: 768px) {
         .section__container {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .content {
-          text-align: left;
+          max-width: 800px;
         }
 
         .image img {
           max-width: 400px;
+        }
+
+        .title {
+          font-size: 2.5rem;
+        }
+
+        .description {
+          font-size: 1.2rem;
         }
       }
     </style>
@@ -125,6 +131,9 @@
     </nav>
     <section class="section">
       <div class="section__container">
+        <div class="image">
+          <img src="images/IMG_6293.jpeg" alt="profile" />
+        </div>
         <div class="content">
           <p class="subtitle">HELLO</p>
           <h3 class="title">
@@ -136,9 +145,6 @@
           <div class="action__btns">
             <a href="resume.html" class="next">Next</a>
           </div>
-        </div>
-        <div class="image">
-          <img src="images/IMG_6293.jpeg" alt="profile" />
         </div>
       </div>
     </section>
