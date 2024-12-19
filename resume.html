@@ -17,11 +17,46 @@
         font-family: Arial, sans-serif;
       }
 
-      /* จัด container ให้กึ่งกลางทั้งแนวตั้งและแนวนอน */
+      /* จัดเมนูด้านบน */
+      nav {
+        position: fixed; /* ทำให้แถบเมนูติดอยู่ด้านบน */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        z-index: 1000; /* ให้เมนูอยู่ด้านบนสุด */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav .logo a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      /* ปรับระยะห่างสำหรับ container */
       .section__container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 100px 20px 20px; /* เพิ่ม padding-top ให้เพียงพอ (100px) */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -70,7 +105,7 @@
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
         .section__container {
-          padding: 40px;
+          padding-top: 120px; /* เพิ่ม padding-top ให้มากขึ้นในหน้าจอใหญ่ */
         }
 
         h1 {
@@ -105,32 +140,12 @@
           font-size: 1.3rem;
         }
       }
-
-      /* Media Queries เฉพาะ iPad แนวตั้ง */
-      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-        .resume__image img {
-          max-width: 500px;
-        }
-
-        .action__btns {
-          flex-direction: column; /* ปุ่มเรียงในแนวตั้ง */
-          gap: 10px;
-        }
-
-        .action__btns a {
-          padding: 12px 25px;
-        }
-      }
     </style>
   </head>
   <body>
     <nav>
       <div class="nav__content">
         <div class="logo"><a href="#">Portfolio</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Resume</a></li>
