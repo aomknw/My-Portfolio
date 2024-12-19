@@ -164,5 +164,22 @@
         </div>
       </div>
     </section>
+
+    <!-- เพิ่ม Script เพื่อทำการกำหนด active เมนู -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // ตรวจสอบ URL ปัจจุบัน
+        const currentPage = window.location.pathname.split("/").pop();
+        const menuLinks = document.querySelectorAll('nav a');
+        
+        // ลูปผ่านทุกลิงก์ในเมนู
+        menuLinks.forEach(link => {
+          // เปรียบเทียบ URL กับ href ของแต่ละลิงก์
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');  // เพิ่มคลาส active ให้กับลิงก์ที่ตรงกัน
+          }
+        });
+      });
+    </script>
   </body>
 </html>
