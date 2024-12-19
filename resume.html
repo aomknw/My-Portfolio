@@ -11,11 +11,22 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
     <style>
-      /* จัด container ให้กึ่งกลาง */
+      /* ตั้งค่าเบื้องต้น */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* จัด container ให้กึ่งกลางทั้งแนวตั้งและแนวนอน */
       .section__container {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh; /* ครอบคลุมความสูงทั้งหมด */
         text-align: center;
       }
 
@@ -31,8 +42,6 @@
         width: 100%;
         max-width: 400px; /* จำกัดความกว้างสูงสุด */
         height: auto; /* รักษาสัดส่วนของรูป */
-        display: block;
-        margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
         border: 1px solid #ddd; /* เพิ่มเส้นขอบ */
         border-radius: 5px; /* มุมโค้ง */
       }
@@ -40,7 +49,7 @@
       /* จัดสไตล์ปุ่ม */
       .action__btns {
         display: flex;
-        justify-content: space-between;
+        gap: 20px; /* เพิ่มช่องว่างระหว่างปุ่ม */
         margin-top: 20px;
       }
 
@@ -94,6 +103,22 @@
         .action__btns a {
           padding: 20px 40px;
           font-size: 1.3rem;
+        }
+      }
+
+      /* Media Queries เฉพาะ iPad แนวตั้ง */
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        .resume__image img {
+          max-width: 500px;
+        }
+
+        .action__btns {
+          flex-direction: column; /* ปุ่มเรียงในแนวตั้ง */
+          gap: 10px;
+        }
+
+        .action__btns a {
+          padding: 12px 25px;
         }
       }
     </style>
