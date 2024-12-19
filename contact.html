@@ -136,11 +136,11 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a href="index.html">Home</a></li> <!-- หน้าหลัก -->
-          <li><a href="resume.html">Resume</a></li> <!-- หน้าประวัติ -->
-          <li><a href="projects.html">Projects</a></li> <!-- หน้าผลงาน -->
-          <li><a href="certificates.html">Certificates</a></li> <!-- หน้ารับรอง -->
-          <li><a href="contact.html">Contact</a></li> <!-- หน้าติดต่อ -->
+          <li><a href="index.html" class="home">Home</a></li> <!-- หน้าหลัก -->
+          <li><a href="resume.html" class="resume">Resume</a></li> <!-- หน้าประวัติ -->
+          <li><a href="projects.html" class="projects">Projects</a></li> <!-- หน้าผลงาน -->
+          <li><a href="certificates.html" class="certificates">Certificates</a></li> <!-- หน้ารับรอง -->
+          <li><a href="contact.html" class="contact">Contact</a></li> <!-- หน้าติดต่อ -->
         </ul>
       </div>
     </nav>
@@ -173,6 +173,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         const menuLinks = document.querySelectorAll('nav a');
         menuLinks.forEach(link => {
+          // เปรียบเทียบ href ของลิงก์กับ pathname ของ URL ปัจจุบัน
           if (link.getAttribute('href') === window.location.pathname) {
             link.classList.add('active');  // เพิ่มคลาส active
           }
