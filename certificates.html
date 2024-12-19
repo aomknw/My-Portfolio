@@ -29,6 +29,7 @@
         justify-content: flex-start;
         min-height: 100vh;
         text-align: center;
+        padding-top: 140px; /* เพิ่มระยะห่างจากแถบเมนู */
       }
 
       /* จัดรูปแบบหัวข้อ */
@@ -109,11 +110,16 @@
           padding: 15px 30px;
           font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
         }
+
+        .section__container {
+          padding-top: 160px; /* ปรับระยะห่างจากแถบเมนูในหน้าจอใหญ่ */
+        }
       }
 
       @media (min-width: 1024px) {
         .section__container {
           max-width: 1000px;
+          padding-top: 160px; /* ปรับระยะห่างให้เท่ากันสำหรับหน้าจอใหญ่ */
         }
 
         h1 {
