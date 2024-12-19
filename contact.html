@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact</title>
+    <style>
+      /* ตั้งค่าเบื้องต้น */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+      }
+
+      /* จัด container */
+      .section__container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 140px 20px 60px; /* เพิ่ม padding-top เพื่อเลื่อนลง */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      /* รูปแบบข้อความ */
+      .content {
+        max-width: 600px;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .title span {
+        color: #007bff;
+      }
+
+      .description {
+        font-size: 1.2rem;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 40px;
+      }
+
+      /* ฟอร์มการติดต่อ */
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      .contact-form textarea {
+        height: 150px;
+        resize: vertical;
+      }
+
+      /* จัดรูปแบบปุ่ม */
+      .action__btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+      }
+
+      .action__btns a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+        background-color: #007bff;
+        padding: 12px 30px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        width: auto;
+        min-width: 150px;
+        text-align: center;
+      }
+
+      .action__btns a:hover {
+        background-color: #0056b3;
+      }
+
+      /* Media Queries */
+      @media (min-width: 768px) {
+        .section__container {
+          max-width: 800px;
+          padding-top: 120px;
+        }
+
+        .action__btns a {
+          padding: 15px 30px;
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section__container {
+          max-width: 1000px;
+        }
+
+        .action__btns a {
+          padding: 15px 35px;
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Certificates</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">GET IN TOUCH</p>
+          <h3 class="title">Contact <span>Me</span></h3>
+          <p class="description">
+            I would love to hear from you! Please fill out the form below to get in touch with me.
+          </p>
+
+          <!-- ฟอร์มการติดต่อ -->
+          <div class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+
+          <div class="action__btns">
+            <a href="certificates.html" class="back">Back</a>
+            <a href="index.html" class="next">Next</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
 
