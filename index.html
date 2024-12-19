@@ -15,94 +15,109 @@
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #f7f7f7;
       }
 
-      /* จัด container */
+      /* จัด container ให้กึ่งกลางทั้งแนวตั้งและแนวนอน */
       .section__container {
-        max-width: 1000px;
+        max-width: 800px;
         margin: 0 auto;
-        padding: 60px 20px;
+        padding: 140px 20px 20px; /* เปลี่ยน padding-top เป็น 140px */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
+        min-height: 100vh; /* ครอบคลุมความสูงทั้งหมด */
         text-align: center;
+        margin-top: 140px; /* เพิ่มระยะห่างจากแถบเมนู */
       }
 
-      /* รูปแบบข้อความ */
-      .content {
-        margin-bottom: 40px;
-      }
-
-      .subtitle {
-        font-size: 1.5rem;
-        color: #555;
-        margin-bottom: 10px;
-      }
-
-      .title {
-        font-size: 2.5rem;
+      /* จัดรูปแบบหัวข้อ */
+      h1 {
+        font-size: 2rem;
         color: #333;
         margin-bottom: 20px;
+        margin-top: 40px; /* เพิ่มระยะห่างจากด้านบน */
       }
 
-      .title span {
-        color: #007bff;
+      /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
+      .certificate img {
+        width: 100%;
+        max-width: 400px; /* จำกัดความกว้างสูงสุด */
+        height: auto; /* รักษาสัดส่วนของรูป */
+        border: 1px solid #ddd; /* เพิ่มเส้นขอบ */
+        border-radius: 5px; /* มุมโค้ง */
+        margin: 20px 0; /* เพิ่มระยะห่างระหว่างรูป */
       }
 
-      .description {
-        font-size: 1.2rem;
-        color: #555;
-        line-height: 1.5;
-        margin-bottom: 40px;
-      }
-
-      /* จัดรูปแบบปุ่ม */
+      /* จัดสไตล์ปุ่ม */
       .action__btns {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        justify-content: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+        gap: 20px; /* เพิ่มช่องว่างระหว่างปุ่ม */
         margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
       }
 
       .action__btns a {
+        flex: 1;
+        text-align: center;
+        padding: 10px 20px;
         text-decoration: none;
         font-size: 1rem;
         color: white;
         background-color: #007bff;
-        padding: 12px 30px;
         border-radius: 5px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s;
       }
 
       .action__btns a:hover {
         background-color: #0056b3;
       }
 
-      /* จัดรูปภาพ */
-      .image img {
-        max-width: 300px;
-        height: auto;
-        border-radius: 50%;
-        border: 3px solid #ddd;
-      }
-
-      /* Media Queries */
+      /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
         .section__container {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
+          padding: 160px 40px 40px; /* เปลี่ยน padding-top เป็น 160px */
         }
 
-        .content {
-          text-align: left;
+        h1 {
+          font-size: 2.5rem;
         }
 
-        .image img {
-          max-width: 400px;
+        .certificate img {
+          max-width: 600px; /* เพิ่มขนาดรูปภาพสำหรับหน้าจอใหญ่ */
+        }
+
+        .action__btns a {
+          padding: 15px 30px;
+          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section__container {
+          max-width: 1000px;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        .certificate img {
+          max-width: 700px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
+        }
+
+        .action__btns a {
+          padding: 20px 40px;
+          font-size: 1.3rem;
+        }
+      }
+
+      /* Media Queries เฉพาะ iPad แนวตั้ง */
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        .action__btns {
+          flex-direction: row; /* ปุ่มเรียงในแนวนอน (ซ้าย-ขวา) */
         }
       }
     </style>
@@ -124,23 +139,53 @@
         </ul>
       </div>
     </nav>
-    <section class="section">
+
+    <section class="section" id="certificates">
       <div class="section__container">
-        <div class="content">
-          <p class="subtitle">HELLO</p>
-          <h3 class="title">
-            I'm <span>Kanokwan Riamsri<br />a</span> junior university student
-          </h3>
-          <p class="description">
-            Welcome to my portfolio! My name is Kanokwan Riamsri. I am currently a third-year student majoring in Computer Science at the Faculty of Science, Sriracha Campus, Kasetsart University, Sriracha.
+        <h1>Certificates</h1>
+
+        <!-- ใบประกาศนียบัตรที่ 1 -->
+        <div class="certificate">
+          <h2>FutureTech Program</h2>
+          <p><strong>Topic:</strong> Cloud Computing Skills</p>
+          <img src="images/01.jpg" alt="FutureTech Cloud Computing Certificate" />
+          <p>
+            <em>
+              Certificate awarded for completing the "Cloud Computing Skills" course
+              under the FutureTech Program on September 8, 2024.
+            </em>
           </p>
-          <div class="action__btns">
-            <a href="index.html" class="back">Back</a>
-            <a href="resume.html" class="next">Next</a>
-          </div>
         </div>
-        <div class="image">
-          <img src="images/IMG_6293.jpeg" alt="profile" />
+
+        <!-- ใบประกาศนียบัตรที่ 2 -->
+        <div class="certificate">
+          <h2>FutureTech Program</h2>
+          <p><strong>Topic:</strong> Web Application Design Skills</p>
+          <img src="images/02.jpg" alt="FutureTech Web Design Certificate" />
+          <p>
+            <em>
+              Certificate awarded for completing the "Web Application Design Skills" course
+              under the FutureTech Program on September 15, 2024.
+            </em>
+          </p>
+        </div>
+
+        <!-- ใบประกาศนียบัตรที่ 3 -->
+        <div class="certificate">
+          <h2>LINK* Certified Network Cabling for Engineering</h2>
+          <p><strong>Organized by:</strong> LINK Asia Limited</p>
+          <img src="images/03.jpg" alt="Network Cabling Certificate" />
+          <p>
+            <em>
+              Certificate awarded by LINK Asia Limited for completing the "Certified Network Cabling for Engineering"
+              training conducted at the Kasetsart University, Sriracha Campus.
+            </em>
+          </p>
+        </div>
+
+        <!-- ปุ่ม Next -->
+        <div class="action__btns">
+          <a href="projects.html" class="next">Next</a>
         </div>
       </div>
     </section>
