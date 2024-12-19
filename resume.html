@@ -11,51 +11,22 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
     <style>
-      /* Reset */
-      * {
+      /* ตั้งค่าเบื้องต้น */
+      body {
         margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        font-family: Arial, sans-serif;
       }
 
-      /* จัดเมนูด้านบน */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333; /* สีของแถบเมนู */
-        color: white;
-        padding: 10px 20px;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      nav .logo a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5rem;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 15px;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1rem;
-      }
-
-      /* เว้นระยะห่างด้านบนสำหรับ container */
+      /* จัด container ให้กึ่งกลางทั้งแนวตั้งและแนวนอน */
       .section__container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 120px 20px 20px; /* เพิ่ม padding-top เพื่อไม่ให้ซ่อนใต้เมนู */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh; /* ครอบคลุมความสูงทั้งหมด */
         text-align: center;
       }
 
@@ -69,17 +40,16 @@
       /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
       .resume__image img {
         width: 100%;
-        max-width: 400px;
+        max-width: 400px; /* จำกัดความกว้างสูงสุด */
         height: auto; /* รักษาสัดส่วนของรูป */
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        border: 1px solid #ddd; /* เพิ่มเส้นขอบ */
+        border-radius: 5px; /* มุมโค้ง */
       }
 
       /* จัดสไตล์ปุ่ม */
       .action__btns {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        gap: 20px; /* เพิ่มช่องว่างระหว่างปุ่ม */
         margin-top: 20px;
       }
 
@@ -100,7 +70,7 @@
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
         .section__container {
-          padding-top: 140px;
+          padding: 40px;
         }
 
         h1 {
@@ -108,12 +78,47 @@
         }
 
         .resume__image img {
-          max-width: 600px;
+          max-width: 600px; /* เพิ่มขนาดรูปภาพสำหรับหน้าจอใหญ่ */
         }
 
         .action__btns a {
           padding: 15px 30px;
-          font-size: 1.2rem;
+          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section__container {
+          max-width: 1000px;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        .resume__image img {
+          max-width: 700px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
+        }
+
+        .action__btns a {
+          padding: 20px 40px;
+          font-size: 1.3rem;
+        }
+      }
+
+      /* Media Queries เฉพาะ iPad แนวตั้ง */
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        .resume__image img {
+          max-width: 500px;
+        }
+
+        .action__btns {
+          flex-direction: column; /* ปุ่มเรียงในแนวตั้ง */
+          gap: 10px;
+        }
+
+        .action__btns a {
+          padding: 12px 25px;
         }
       }
     </style>
@@ -122,6 +127,10 @@
     <nav>
       <div class="nav__content">
         <div class="logo"><a href="#">Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Resume</a></li>
@@ -146,5 +155,8 @@
         </div>
       </div>
     </section>
+  </body>
+</html>
+
   </body>
 </html>
