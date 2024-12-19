@@ -79,15 +79,16 @@
       }
 
       .action__btns a {
-        flex: 1; /* ให้ปุ่มขยายเต็มพื้นที่ */
-        text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-        padding: 10px 20px; /* ขนาดของปุ่ม */
-        text-decoration: none; /* ลบขีดเส้นใต้ */
-        font-size: 1rem; /* ขนาดตัวอักษร */
-        color: white; /* สีข้อความ */
-        background-color: #007bff; /* สีพื้นหลัง */
-        border-radius: 5px; /* ทำมุมโค้ง */
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+        background-color: #007bff;
+        padding: 12px 30px;
+        border-radius: 5px;
         transition: background-color 0.3s; /* เพิ่มเอฟเฟกต์เวลา hover */
+        width: auto; /* ปรับขนาดให้เป็นขนาดตามความเหมาะสม */
+        min-width: 150px; /* กำหนดขนาดขั้นต่ำ */
+        text-align: center;
       }
 
       .action__btns a:hover {
@@ -98,7 +99,7 @@
       @media (min-width: 768px) {
         .section__container {
           max-width: 800px;
-          padding-top: 120px; /* เพิ่ม padding-top เพิ่มเติมสำหรับหน้าจอใหญ่ */
+          padding-top: 120px;
         }
 
         .image img {
@@ -107,7 +108,7 @@
 
         .action__btns a {
           padding: 15px 30px;
-          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
+          font-size: 1.2rem; /* ขยายขนาดปุ่ม */
         }
 
         .title {
@@ -125,8 +126,8 @@
         }
 
         .action__btns a {
-          padding: 20px 40px;
-          font-size: 1.3rem; /* เพิ่มขนาดปุ่ม */
+          padding: 15px 35px; /* ปรับขนาดปุ่ม */
+          font-size: 1.3rem; /* ขยายขนาดฟอนต์ */
         }
       }
     </style>
