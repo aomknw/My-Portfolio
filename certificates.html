@@ -95,6 +95,14 @@
         background-color: #007bff;
       }
 
+      /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
+      nav ul li a.active {
+        color: #fff;
+        background-color: #0f52ba;
+        border: 2px solid #0f52ba;
+        border-radius: 5px;
+      }
+
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
         h1 {
@@ -159,7 +167,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Resume</a></li>
           <li><a href="#">Projects</a></li>
-          <li><a href="#">Certificates</a></li>
+          <li><a href="#" class="active">Certificates</a></li> <!-- เพิ่ม active -->
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
