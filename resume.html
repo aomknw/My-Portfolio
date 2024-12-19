@@ -11,22 +11,23 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
     <style>
-      /* ตั้งค่าเบื้องต้น */
-      body {
+      /* Reset */
+      * {
         margin: 0;
-        font-family: Arial, sans-serif;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       /* จัดเมนูด้านบน */
       nav {
-        position: fixed; /* ทำให้แถบเมนูติดอยู่ด้านบน */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #333;
+        background-color: #333; /* สีของแถบเมนู */
         color: white;
         padding: 10px 20px;
-        z-index: 1000; /* ให้เมนูอยู่ด้านบนสุด */
+        z-index: 1000;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -40,8 +41,6 @@
 
       nav ul {
         list-style: none;
-        padding: 0;
-        margin: 0;
         display: flex;
         gap: 15px;
       }
@@ -52,16 +51,11 @@
         font-size: 1rem;
       }
 
-      /* ปรับระยะห่างสำหรับ container */
+      /* เว้นระยะห่างด้านบนสำหรับ container */
       .section__container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 100px 20px 20px; /* เพิ่ม padding-top ให้เพียงพอ (100px) */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh; /* ครอบคลุมความสูงทั้งหมด */
+        padding: 120px 20px 20px; /* เพิ่ม padding-top เพื่อไม่ให้ซ่อนใต้เมนู */
         text-align: center;
       }
 
@@ -75,16 +69,17 @@
       /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
       .resume__image img {
         width: 100%;
-        max-width: 400px; /* จำกัดความกว้างสูงสุด */
+        max-width: 400px;
         height: auto; /* รักษาสัดส่วนของรูป */
-        border: 1px solid #ddd; /* เพิ่มเส้นขอบ */
-        border-radius: 5px; /* มุมโค้ง */
+        border: 1px solid #ddd;
+        border-radius: 5px;
       }
 
       /* จัดสไตล์ปุ่ม */
       .action__btns {
         display: flex;
-        gap: 20px; /* เพิ่มช่องว่างระหว่างปุ่ม */
+        justify-content: center;
+        gap: 20px;
         margin-top: 20px;
       }
 
@@ -105,7 +100,7 @@
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
         .section__container {
-          padding-top: 120px; /* เพิ่ม padding-top ให้มากขึ้นในหน้าจอใหญ่ */
+          padding-top: 140px;
         }
 
         h1 {
@@ -113,31 +108,12 @@
         }
 
         .resume__image img {
-          max-width: 600px; /* เพิ่มขนาดรูปภาพสำหรับหน้าจอใหญ่ */
+          max-width: 600px;
         }
 
         .action__btns a {
           padding: 15px 30px;
-          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .section__container {
-          max-width: 1000px;
-        }
-
-        h1 {
-          font-size: 3rem;
-        }
-
-        .resume__image img {
-          max-width: 700px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
-        }
-
-        .action__btns a {
-          padding: 20px 40px;
-          font-size: 1.3rem;
+          font-size: 1.2rem;
         }
       }
     </style>
