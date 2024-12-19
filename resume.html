@@ -57,6 +57,45 @@
       .action__btns a:hover {
         background-color: #0056b3;
       }
+
+      /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
+      @media (min-width: 768px) {
+        .section__container {
+          padding: 40px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .resume__image img {
+          max-width: 600px; /* เพิ่มขนาดรูปภาพสำหรับหน้าจอใหญ่ */
+        }
+
+        .action__btns a {
+          padding: 15px 30px;
+          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section__container {
+          max-width: 1000px;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        .resume__image img {
+          max-width: 700px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
+        }
+
+        .action__btns a {
+          padding: 20px 40px;
+          font-size: 1.3rem;
+        }
+      }
     </style>
   </head>
   <body>
