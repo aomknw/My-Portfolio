@@ -36,7 +36,7 @@
         margin-bottom: 40px;
       }
 
-      .project__item {
+      .casestudy__item {
         margin-bottom: 40px;
         width: 100%;
         padding: 20px;
@@ -47,55 +47,32 @@
         transition: transform 0.3s, box-shadow 0.3s;
       }
 
-      .project__item:hover {
+      .casestudy__item:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
-      .project__title {
+      .casestudy__title {
         font-size: 1.8rem;
         font-weight: bold;
         color: #0f52ba;
         margin-bottom: 15px;
       }
 
-      .project__year {
+      .casestudy__year {
         font-size: 1rem;
         color: #777;
         margin-bottom: 10px;
       }
 
-      .project__description {
+      .casestudy__description {
         font-size: 1rem;
         color: #555;
         margin-bottom: 20px;
         line-height: 1.6;
       }
 
-      .project__images {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .project__images img {
-        width: calc(33.33% - 20px);
-        max-width: 300px;
-        height: auto;
-        margin: 10px 0;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        display: block;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .project__images img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .system__overview {
+      .casestudy__details {
         margin-top: 20px;
         padding: 20px;
         border: 2px dashed #ccc;
@@ -104,33 +81,13 @@
         text-align: left;
       }
 
-      .system__overview img {
+      .casestudy__details img {
         display: block;
         margin: 0 auto 20px;
         max-width: 80%;
         border: 1px solid #ddd;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .figma__btn {
-        display: block;
-        margin: 0 auto 20px;
-        padding: 12px 30px;
-        font-size: 1rem;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        background-color: #0f52ba;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        width: auto;
-        max-width: 200px;
-      }
-
-      .figma__btn:hover {
-        background-color: #007bff;
       }
 
       .action__btns {
@@ -166,15 +123,11 @@
         padding: 10px 15px;
       }
 
-      /* เพิ่ม Media Query สำหรับหน้าจอเล็ก */
       @media (max-width: 600px) {
-      .project__images img {
-        width: calc(50% - 10px); /* ปรับให้ใช้พื้นที่ 50% ของความกว้าง */
-        max-width: 100%; /* ทำให้รูปไม่เกินขนาด container */
-    }
-  }
-
-
+        .casestudy__details img {
+          max-width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -188,8 +141,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="casestudy.html">CaseStudy</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="casestudy.html" class="active">CaseStudy</a></li>
           <li><a href="certificates.html">Certificates</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -198,53 +151,47 @@
 
     <section class="section">
       <div class="section__container">
-        <h1>Projects</h1>
-        <h2>Case study Projects</h2>
+        <h1>Case Studies</h1>
 
-        <div class="project__item">
-          <h2 class="project__title">Movie Night - Online Movie Ticket Booking System</h2>
-          <p class="project__year">2024 | UX/UI Designer</p>
-          <p class="project__description">
-            System analyzed user requirements and designed system workflows using Figma, including wireframes and interactive prototypes. Created system documentation such as Use Case, Activity Diagram, and DFD. Collaborated with my team.
+        <div class="casestudy__item">
+          <h2 class="casestudy__title">E-Commerce UX Optimization</h2>
+          <p class="casestudy__year">2024 | UX Researcher</p>
+          <p class="casestudy__description">
+            Conducted comprehensive user research to identify pain points in the shopping experience. Implemented design changes that improved navigation and checkout flow, resulting in a 20% increase in conversion rates.
           </p>
-          <div class="system__overview">
-            <a class="figma__btn" href="https://www.figma.com/proto/nXPFF0AOdBq5VMnbcxUEwh/MovieNight_User?node-id=38-122&starting-point-node-id=38%3A122&t=hVQXqjRZeIPPPIVW-1" target="_blank">View Prototype on Figma</a>
-            <img src="images/SystemOverview.jpg" alt="System Overview" />
+          <div class="casestudy__details">
+            <img src="images/ecommerce.jpg" alt="E-Commerce UX Optimization" />
             <p>
-              The system is an online movie ticket booking system designed to allow customers to easily select and book movie tickets through an application. The main functions of the system involve managing movies, showtimes, seat reservations, payments, and member management. Additionally, employees can manage movie and showtime information through the system.
+              This case study delves into how user feedback and A/B testing were leveraged to refine the online shopping experience. Key improvements included simplifying the product search interface and enhancing mobile responsiveness.
             </p>
           </div>
-          <div class="project__images">
-            <img src="images/movie1.png" alt="Movie Night Application Screenshot 1" />
-            <img src="images/movie2.png" alt="Movie Night Application Screenshot 2" />
-            <img src="images/movie3.png" alt="Movie Night Application Screenshot 3" />
-            <img src="images/movie4.png" alt="Movie Night Application Screenshot 4" />
-            <img src="images/movie5.png" alt="Movie Night Application Screenshot 5" />
-            <img src="images/movie6.png" alt="Movie Night Application Screenshot 6" />
+        </div>
+
+        <div class="casestudy__item">
+          <h2 class="casestudy__title">Healthcare App Development</h2>
+          <p class="casestudy__year">2023 | Product Designer</p>
+          <p class="casestudy__description">
+            Designed a healthcare mobile app focusing on patient-doctor communication. Created wireframes, prototypes, and conducted usability tests to ensure intuitive navigation.
+          </p>
+          <div class="casestudy__details">
+            <img src="images/healthcare.jpg" alt="Healthcare App" />
+            <p>
+              The app features secure messaging, appointment scheduling, and health record management. Emphasis was placed on data security and ease of use for non-technical users.
+            </p>
           </div>
         </div>
 
-        <div class="project__item">
-          <h2 class="project__title">Food Shop Ordering Simulation</h2>
-          <p class="project__year">2023 | C++ Developer</p>
-          <p class="project__description">
-            Developed a food ordering system using C++ Developer. The system supports order management, payment processing, and customer feedback, with features like dynamic menu selection and total cost calculation.
+        <div class="casestudy__item">
+          <h2 class="casestudy__title">Smart Home Dashboard</h2>
+          <p class="casestudy__year">2022 | UI Developer</p>
+          <p class="casestudy__description">
+            Developed a smart home dashboard to control and monitor IoT devices. Designed an interface that supports real-time updates and voice commands.
           </p>
-          <div class="project__images">
-            <img src="images/foodshop1.png" alt="Food Shop Ordering Simulation Output 1" />
-            <img src="images/foodshop2.png" alt="Food Shop Ordering Simulation Output 2" />
-          </div>
-        </div>
-
-        <div class="project__item">
-          <h2 class="project__title">Pizza Ordering Simulation</h2>
-          <p class="project__year">2022 | Python Developer</p>
-          <p class="project__description">
-            A pizza ordering simulation program developed in Python. Users can select pizza dough, toppings, and drinks while calculating the total price and change.
-          </p>
-          <div class="project__images">
-            <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
-            <img src="images/pizza2.png" alt="Pizza Ordering Simulation Output 2" />
+          <div class="casestudy__details">
+            <img src="images/smarthome.jpg" alt="Smart Home Dashboard" />
+            <p>
+              This project involved integrating multiple APIs for seamless device control. The dashboard provides a comprehensive overview of energy usage, security, and device status.
+            </p>
           </div>
         </div>
 
