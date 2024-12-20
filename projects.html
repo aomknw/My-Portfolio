@@ -113,18 +113,24 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
-      .system__overview a {
+      .figma__btn {
         display: block;
-        text-align: center;
+        margin: 0 auto 20px;
+        padding: 12px 30px;
         font-size: 1rem;
-        color: #0f52ba;
-        text-decoration: none;
-        margin-bottom: 20px;
         font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #0f52ba;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        width: auto;
+        max-width: 200px;
       }
 
-      .system__overview a:hover {
-        text-decoration: underline;
+      .figma__btn:hover {
+        background-color: #007bff;
       }
 
       .action__btns {
@@ -215,7 +221,7 @@
             System analyzed user requirements and designed system workflows using Figma, including wireframes and interactive prototypes. Created system documentation such as Use Case, Activity Diagram, and DFD. Collaborated with my team.
           </p>
           <div class="system__overview">
-            <a href="https://www.figma.com/proto/nXPFF0AOdBq5VMnbcxUEwh/MovieNight_User?node-id=38-122&starting-point-node-id=38%3A122&t=hVQXqjRZeIPPPIVW-1" target="_blank">View Prototype on Figma</a>
+            <a class="figma__btn" href="https://www.figma.com/prototype-link" target="_blank">View Prototype on Figma</a>
             <img src="images/SystemOverview.jpg" alt="System Overview" />
             <p>
               The system is an online movie ticket booking system designed to allow customers to easily select and book movie tickets through an application. The main functions of the system involve managing movies, showtimes, seat reservations, payments, and member management. Additionally, employees can manage movie and showtime information through the system.
