@@ -32,48 +32,6 @@
         padding-top: 140px; /* เพิ่มระยะห่างจากแถบเมนู */
       }
 
-      /* จัดรูปแบบหัวข้อ */
-      h1 {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 40px;
-        padding: 10px;
-        border: 2px solid #0f52ba;
-        border-radius: 8px;
-        background-color: #e6f0ff;
-        display: inline-block;
-      }
-
-      .project__title {
-        font-size: 2rem;
-        color: #0f52ba;
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 2px solid #0f52ba;
-        border-radius: 8px;
-        background-color: #f0f8ff;
-      }
-
-      .project__year {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 20px;
-        padding: 5px 10px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-      }
-
-      .project__description {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px dashed #bbb;
-        border-radius: 5px;
-        background-color: #fdfdfd;
-      }
-
       /* จัดรูปภาพ */
       .project__images {
         display: flex;
@@ -123,22 +81,8 @@
         background-color: #007bff;
       }
 
-      /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
-      nav ul li a.active {
-        color: #0f52ba;
-        background-color: transparent;
-        border-top: 3px solid #0f52ba;
-        border-bottom: 3px solid #0f52ba;
-        border-radius: 0;
-        padding: 10px 15px;
-      }
-
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
         .project__images img {
           max-width: 500px;
         }
@@ -154,10 +98,6 @@
       }
 
       @media (min-width: 1024px) {
-        h1 {
-          font-size: 3rem;
-        }
-
         .project__images img {
           max-width: 600px;
         }
@@ -193,9 +133,7 @@
 
         <!-- โปรเจกต์ Pizza Ordering Simulation -->
         <div class="project__item">
-          <h2 class="project__title">
-            <i class="ri-file-code-line"></i> Pizza Ordering Simulation
-          </h2>
+          <h2 class="project__title">Pizza Ordering Simulation</h2>
           <p class="project__year">2022 | Python Developer</p>
           <p class="project__description">
             A pizza ordering simulation program developed in Python. Users can
