@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Projects</title>
     <style>
-      /* ตั้งค่าเบื้องต้น */
       body {
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f7f7f7;
       }
 
-      /* จัด container */
       .section__container {
         max-width: 1000px;
         margin: 0 auto;
@@ -32,29 +30,26 @@
         padding-top: 140px;
       }
 
-      /* จัดรูปแบบหัวข้อ */
       h1 {
         font-size: 2rem;
         color: #333;
         margin-bottom: 40px;
       }
 
-      /* จัดโปรเจกต์ */
       .project__item {
         margin-bottom: 40px;
         width: 100%;
-        padding: 20px; /* เพิ่มระยะห่างภายใน */
-        border: 2px solid #ddd; /* กรอบสีเทาอ่อน */
-        border-radius: 12px; /* มุมโค้ง */
-        background-color: #ffffff; /* พื้นหลังสีขาว */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
-        transition: transform 0.3s, box-shadow 0.3s; /* เอฟเฟกต์เมื่อชี้ */
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
       }
 
-      /* เอฟเฟกต์เมื่อชี้ที่โปรเจกต์ */
       .project__item:hover {
-        transform: translateY(-5px); /* ขยับขึ้นเล็กน้อย */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
       .project__title {
@@ -77,7 +72,6 @@
         line-height: 1.6;
       }
 
-      /* จัดรูปภาพ */
       .project__images {
         display: flex;
         justify-content: center;
@@ -96,13 +90,11 @@
         transition: transform 0.3s, box-shadow 0.3s;
       }
 
-      /* เอฟเฟกต์เมื่อชี้ที่รูปภาพ */
       .project__images img:hover {
-        transform: scale(1.05); /* ขยายเล็กน้อย */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
-      /* จัดปุ่ม */
       .action__btns {
         display: flex;
         justify-content: center;
@@ -127,14 +119,13 @@
         background-color: #007bff;
       }
 
-      /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
       nav ul li a.active {
-        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
-        background-color: transparent; /* ไม่มีพื้นหลัง */
-        border-top: 3px solid #0f52ba;  /* กรอบบน */
-        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
-        border-radius: 0; /* ไม่มีมุมโค้ง */
-        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+        color: #0f52ba;
+        background-color: transparent;
+        border-top: 3px solid #0f52ba;
+        border-bottom: 3px solid #0f52ba;
+        border-radius: 0;
+        padding: 10px 15px;
       }
     </style>
   </head>
@@ -159,24 +150,32 @@
     <section class="section">
       <div class="section__container">
         <h1>Projects</h1>
-          <h2>Class Projects</h2>
+        <h2>Class Projects</h2>
 
-        <!-- โปรเจกต์ Pizza Ordering Simulation -->
         <div class="project__item">
           <h2 class="project__title">Pizza Ordering Simulation</h2>
           <p class="project__year">2022 | Python Developer</p>
           <p class="project__description">
             A pizza ordering simulation program developed in Python. Users can select pizza dough, toppings, and drinks while calculating the total price and change.
           </p>
-
-          <!-- รูปภาพตอนรันโปรเจกต์ -->
           <div class="project__images">
             <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
             <img src="images/pizza2.png" alt="Pizza Ordering Simulation Output 2" />
           </div>
         </div>
 
-        <!-- ปุ่ม Back และ Next -->
+        <div class="project__item">
+          <h2 class="project__title">Food Shop Ordering Simulation</h2>
+          <p class="project__year">2023 | C++ Developer</p>
+          <p class="project__description">
+            Developed a food ordering system using C++ and OOP. The system supports order management, payment processing, and customer feedback, with features like dynamic menu selection and total cost calculation.
+          </p>
+          <div class="project__images">
+            <img src="images/foodshop1.png" alt="Food Shop Ordering Simulation Output 1" />
+            <img src="images/foodshop2.png" alt="Food Shop Ordering Simulation Output 2" />
+          </div>
+        </div>
+
         <div class="action__btns">
           <a href="certificates.html" class="back">Back</a>
           <a href="contact.html" class="next">Next</a>
