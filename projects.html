@@ -32,28 +32,53 @@
         padding-top: 140px; /* เพิ่มระยะห่างจากแถบเมนู */
       }
 
+      /* จัดรูปแบบหัวข้อ */
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 40px;
+      }
+
+      /* จัดรูปภาพและคำอธิบายของโปรเจกต์ */
+      .project__item {
+        margin-bottom: 40px;
+        width: 100%;
+      }
+
+      .project__title {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .project__year {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .project__description {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
       /* จัดรูปภาพ */
       .project__images {
         display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
+        justify-content: center; /* จัดให้รูปภาพอยู่ตรงกลาง */
+        gap: 20px; /* ระยะห่างระหว่างรูป */
+        flex-wrap: wrap; /* อนุญาตให้รูปเปลี่ยนแถวได้เมื่อหน้าจอเล็ก */
       }
 
       .project__images img {
         width: 100%;
-        max-width: 450px;
+        max-width: 450px; /* ขนาดรูปไม่เกิน 450px */
         height: auto;
         margin: 10px 0;
-        border: 2px solid #ddd;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .project__images img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        display: block;
       }
 
       /* จัดปุ่ม */
@@ -81,25 +106,43 @@
         background-color: #007bff;
       }
 
+      /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
+      nav ul li a.active {
+        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
+        background-color: transparent; /* ไม่มีพื้นหลัง */
+        border-top: 3px solid #0f52ba;  /* กรอบบน */
+        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
+        border-radius: 0; /* ไม่มีมุมโค้ง */
+        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+      }
+
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
         .project__images img {
-          max-width: 500px;
+          max-width: 500px; /* ขยายขนาดรูปภาพสำหรับหน้าจอใหญ่ */
         }
 
         .action__btns a {
           padding: 15px 30px;
-          font-size: 1.2rem;
+          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
         }
 
         .section__container {
-          padding-top: 160px;
+          padding-top: 160px; /* ปรับระยะห่างจากแถบเมนูในหน้าจอใหญ่ */
         }
       }
 
       @media (min-width: 1024px) {
+        h1 {
+          font-size: 3rem;
+        }
+
         .project__images img {
-          max-width: 600px;
+          max-width: 600px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
         }
 
         .action__btns a {
@@ -136,11 +179,9 @@
           <h2 class="project__title">Pizza Ordering Simulation</h2>
           <p class="project__year">2022 | Python Developer</p>
           <p class="project__description">
-            A pizza ordering simulation program developed in Python. Users can
-            select pizza dough, toppings, and drinks while calculating the
-            total price and change.
+            A pizza ordering simulation program developed in Python. Users can select pizza dough, toppings, and drinks while calculating the total price and change.
           </p>
-
+          
           <!-- รูปภาพตอนรันโปรเจกต์ -->
           <div class="project__images">
             <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
