@@ -29,7 +29,7 @@
         justify-content: flex-start;
         min-height: 100vh;
         text-align: center;
-        padding-top: 140px; /* เพิ่มระยะห่างจากแถบเมนู */
+        padding-top: 140px;
       }
 
       /* จัดรูปแบบหัวข้อ */
@@ -39,46 +39,67 @@
         margin-bottom: 40px;
       }
 
-      /* จัดรูปภาพและคำอธิบายของโปรเจกต์ */
+      /* จัดโปรเจกต์ */
       .project__item {
         margin-bottom: 40px;
         width: 100%;
+        padding: 20px; /* เพิ่มระยะห่างภายใน */
+        border: 2px solid #ddd; /* กรอบสีเทาอ่อน */
+        border-radius: 12px; /* มุมโค้ง */
+        background-color: #ffffff; /* พื้นหลังสีขาว */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+        transition: transform 0.3s, box-shadow 0.3s; /* เอฟเฟกต์เมื่อชี้ */
+      }
+
+      /* เอฟเฟกต์เมื่อชี้ที่โปรเจกต์ */
+      .project__item:hover {
+        transform: translateY(-5px); /* ขยับขึ้นเล็กน้อย */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
       }
 
       .project__title {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 10px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #0f52ba;
+        margin-bottom: 15px;
       }
 
       .project__year {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 20px;
+        font-size: 1rem;
+        color: #777;
+        margin-bottom: 10px;
       }
 
       .project__description {
         font-size: 1rem;
         color: #555;
         margin-bottom: 20px;
+        line-height: 1.6;
       }
 
       /* จัดรูปภาพ */
       .project__images {
         display: flex;
-        justify-content: center; /* จัดให้รูปภาพอยู่ตรงกลาง */
-        gap: 20px; /* ระยะห่างระหว่างรูป */
-        flex-wrap: wrap; /* อนุญาตให้รูปเปลี่ยนแถวได้เมื่อหน้าจอเล็ก */
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
       }
 
       .project__images img {
         width: 100%;
-        max-width: 450px; /* ขนาดรูปไม่เกิน 450px */
+        max-width: 450px;
         height: auto;
         margin: 10px 0;
         border: 1px solid #ddd;
         border-radius: 8px;
         display: block;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      /* เอฟเฟกต์เมื่อชี้ที่รูปภาพ */
+      .project__images img:hover {
+        transform: scale(1.05); /* ขยายเล็กน้อย */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
       }
 
       /* จัดปุ่ม */
@@ -104,51 +125,6 @@
 
       .action__btns a:hover {
         background-color: #007bff;
-      }
-
-      /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
-      nav ul li a.active {
-        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
-        background-color: transparent; /* ไม่มีพื้นหลัง */
-        border-top: 3px solid #0f52ba;  /* กรอบบน */
-        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
-        border-radius: 0; /* ไม่มีมุมโค้ง */
-        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-      }
-
-      /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
-      @media (min-width: 768px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        .project__images img {
-          max-width: 500px; /* ขยายขนาดรูปภาพสำหรับหน้าจอใหญ่ */
-        }
-
-        .action__btns a {
-          padding: 15px 30px;
-          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
-        }
-
-        .section__container {
-          padding-top: 160px; /* ปรับระยะห่างจากแถบเมนูในหน้าจอใหญ่ */
-        }
-      }
-
-      @media (min-width: 1024px) {
-        h1 {
-          font-size: 3rem;
-        }
-
-        .project__images img {
-          max-width: 600px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
-        }
-
-        .action__btns a {
-          padding: 15px 35px;
-          font-size: 1.3rem;
-        }
       }
     </style>
   </head>
@@ -181,7 +157,7 @@
           <p class="project__description">
             A pizza ordering simulation program developed in Python. Users can select pizza dough, toppings, and drinks while calculating the total price and change.
           </p>
-          
+
           <!-- รูปภาพตอนรันโปรเจกต์ -->
           <div class="project__images">
             <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
