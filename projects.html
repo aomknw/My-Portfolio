@@ -18,7 +18,7 @@
         background-color: #f7f7f7;
       }
 
-      /* จัด container ให้กึ่งกลางทั้งแนวตั้งและแนวนอน */
+      /* จัด container */
       .section__container {
         max-width: 1000px;
         margin: 0 auto;
@@ -39,37 +39,42 @@
         margin-bottom: 40px;
       }
 
-      /* จัดโปรเจค */
+      /* จัดรูปภาพและคำอธิบายของโปรเจกต์ */
       .project__item {
-        background-color: #fff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        text-align: left;
+        margin-bottom: 40px;
+        width: 100%;
       }
 
       .project__title {
-        font-size: 1.5rem;
-        color: #186bec;
+        font-size: 2rem;
+        color: #333;
         margin-bottom: 10px;
       }
 
       .project__year {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #555;
         margin-bottom: 20px;
       }
 
       .project__description {
         font-size: 1rem;
-        color: #666;
-        line-height: 1.6;
+        color: #555;
         margin-bottom: 20px;
       }
 
-      /* จัดสไตล์ปุ่ม */
+      /* จัดรูปภาพ */
+      .project__item img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        display: block;
+      }
+
+      /* จัดปุ่ม */
       .action__btns {
         display: flex;
         justify-content: center;
@@ -96,39 +101,12 @@
 
       /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
       nav ul li a.active {
-        color: #0f52ba;
-        background-color: transparent;
-        border-top: 3px solid #0f52ba;
-        border-bottom: 3px solid #0f52ba;
-        border-radius: 0;
-        padding: 10px 15px;
-      }
-
-      /* Media Queries */
-      @media (min-width: 768px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        .action__btns a {
-          padding: 15px 30px;
-          font-size: 1.2rem;
-        }
-
-        .section__container {
-          padding-top: 160px;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        h1 {
-          font-size: 3rem;
-        }
-
-        .action__btns a {
-          padding: 15px 35px;
-          font-size: 1.3rem;
-        }
+        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
+        background-color: transparent; /* ไม่มีพื้นหลัง */
+        border-top: 3px solid #0f52ba;  /* กรอบบน */
+        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
+        border-radius: 0; /* ไม่มีมุมโค้ง */
+        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
       }
     </style>
   </head>
@@ -154,22 +132,17 @@
       <div class="section__container">
         <h1>Projects</h1>
 
-        <!-- โปรเจค 1 -->
+        <!-- โปรเจกต์ Pizza Ordering Simulation -->
         <div class="project__item">
           <h2 class="project__title">Pizza Ordering Simulation</h2>
           <p class="project__year">2022 | Python Developer</p>
           <p class="project__description">
             A pizza ordering simulation program developed in Python. Users can select pizza dough, toppings, and drinks while calculating the total price and change.
           </p>
-        </div>
-
-        <!-- โปรเจค 2 -->
-        <div class="project__item">
-          <h2 class="project__title">Weather Forecast App</h2>
-          <p class="project__year">2023 | React Developer</p>
-          <p class="project__description">
-            A web application that fetches real-time weather updates and displays forecasts based on the user's location.
-          </p>
+          
+          <!-- รูปภาพตอนรันโปรเจกต์ -->
+          <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
+          <img src="images/pizza2.png" alt="Pizza Ordering Simulation Output 2" />
         </div>
 
         <!-- ปุ่ม Back และ Next -->
