@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Certificates</title>
+    <title>Projects</title>
     <style>
       /* ตั้งค่าเบื้องต้น */
       body {
@@ -39,35 +39,34 @@
         margin-bottom: 40px;
       }
 
-      /* จัดรูปแบบใบประกาศนียบัตร */
-      .certificate {
-        margin-bottom: 40px;
-        width: 100%;
-      }
-
-      /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
-      .certificate img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        border: 1px solid #ddd;
+      /* จัดโปรเจค */
+      .project__item {
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+        max-width: 800px;
         margin: 20px auto;
-        display: block;
+        padding: 20px;
+        text-align: left;
       }
 
-      /* จัดหัวข้อใบประกาศนียบัตร */
-      .certificate h2 {
+      .project__title {
         font-size: 1.5rem;
-        color: #333;
+        color: #186bec;
         margin-bottom: 10px;
       }
 
-      /* จัดข้อความอธิบาย */
-      .certificate p {
+      .project__year {
         font-size: 1rem;
         color: #555;
-        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .project__description {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
       }
 
       /* จัดสไตล์ปุ่ม */
@@ -97,63 +96,38 @@
 
       /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
       nav ul li a.active {
-        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
-        background-color: transparent; /* ไม่มีพื้นหลัง */
-        border-top: 3px solid #0f52ba;  /* กรอบบน */
-        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
-        border-radius: 0; /* ไม่มีมุมโค้ง */
-        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+        color: #0f52ba;
+        background-color: transparent;
+        border-top: 3px solid #0f52ba;
+        border-bottom: 3px solid #0f52ba;
+        border-radius: 0;
+        padding: 10px 15px;
       }
 
-
-      /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
+      /* Media Queries */
       @media (min-width: 768px) {
         h1 {
           font-size: 2.5rem;
         }
 
-        .certificate img {
-          max-width: 700px; /* ขยายขนาดรูปภาพสำหรับหน้าจอใหญ่ */
-        }
-
         .action__btns a {
           padding: 15px 30px;
-          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
+          font-size: 1.2rem;
         }
 
         .section__container {
-          padding-top: 160px; /* ปรับระยะห่างจากแถบเมนูในหน้าจอใหญ่ */
+          padding-top: 160px;
         }
       }
 
       @media (min-width: 1024px) {
-        .section__container {
-          max-width: 1000px;
-          padding-top: 160px; /* ปรับระยะห่างให้เท่ากันสำหรับหน้าจอใหญ่ */
-        }
-
         h1 {
           font-size: 3rem;
-        }
-
-        .certificate img {
-          max-width: 800px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
         }
 
         .action__btns a {
           padding: 15px 35px;
           font-size: 1.3rem;
-        }
-      }
-
-      /* Media Queries เฉพาะ iPad แนวตั้ง */
-      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-        .certificate img {
-          max-width: 500px;
-        }
-
-        .action__btns {
-          flex-direction: row; /* ปุ่มเรียงในแนวนอน */
         }
       }
     </style>
@@ -169,8 +143,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="certificates.html" class="active">Certificates</a></li> <!-- เพิ่ม active -->
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -178,50 +152,29 @@
 
     <section class="section">
       <div class="section__container">
-        <h1>Certificates</h1>
+        <h1>Projects</h1>
 
-        <!-- ใบประกาศนียบัตรที่ 1 -->
-        <div class="certificate">
-          <h2>FutureTech Program</h2>
-          <p><strong>Topic:</strong> Cloud Computing Skills</p>
-          <img src="images/01.jpg" alt="FutureTech Cloud Computing Certificate" />
-          <p>
-            <em>
-              Certificate awarded for completing the "Cloud Computing Skills" course
-              under the FutureTech Program on September 8, 2024.
-            </em>
+        <!-- โปรเจค 1 -->
+        <div class="project__item">
+          <h2 class="project__title">Pizza Ordering Simulation</h2>
+          <p class="project__year">2022 | Python Developer</p>
+          <p class="project__description">
+            A pizza ordering simulation program developed in Python. Users can select pizza dough, toppings, and drinks while calculating the total price and change.
           </p>
         </div>
 
-        <!-- ใบประกาศนียบัตรที่ 2 -->
-        <div class="certificate">
-          <h2>FutureTech Program</h2>
-          <p><strong>Topic:</strong> Web Application Design Skills</p>
-          <img src="images/02.jpg" alt="FutureTech Web Design Certificate" />
-          <p>
-            <em>
-              Certificate awarded for completing the "Web Application Design Skills" course
-              under the FutureTech Program on September 15, 2024.
-            </em>
-          </p>
-        </div>
-
-        <!-- ใบประกาศนียบัตรที่ 3 -->
-        <div class="certificate">
-          <h2>LINK* Certified Network Cabling for Engineering</h2>
-          <p><strong>Organized by:</strong> LINK Asia Limited</p>
-          <img src="images/03.jpg" alt="Network Cabling Certificate" />
-          <p>
-            <em>
-              Certificate awarded by LINK Asia Limited for completing the "Certified Network Cabling for Engineering"
-              training conducted at the Kasetsart University, Sriracha Campus.
-            </em>
+        <!-- โปรเจค 2 -->
+        <div class="project__item">
+          <h2 class="project__title">Weather Forecast App</h2>
+          <p class="project__year">2023 | React Developer</p>
+          <p class="project__description">
+            A web application that fetches real-time weather updates and displays forecasts based on the user's location.
           </p>
         </div>
 
         <!-- ปุ่ม Back และ Next -->
         <div class="action__btns">
-          <a href="projects.html" class="back">Back</a>
+          <a href="certificates.html" class="back">Back</a>
           <a href="contact.html" class="next">Next</a>
         </div>
       </div>
