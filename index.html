@@ -22,7 +22,7 @@
       .section__container {
         max-width: 1000px;
         margin: 0 auto;
-        padding: 140px 20px 60px; /* เพิ่ม padding-top เป็น 140px */
+        padding: 140px 20px 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -33,7 +33,7 @@
 
       /* จัดรูปภาพ */
       .image {
-        margin-top: 40px; /* เพิ่ม margin-top เพื่อเลื่อนรูปลง */
+        margin-top: 40px;
         margin-bottom: 40px;
       }
 
@@ -98,23 +98,36 @@
 
       /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
       nav ul li a.active {
-        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
-        background-color: transparent; /* ไม่มีพื้นหลัง */
-        border-top: 3px solid #0f52ba;  /* กรอบบน */
-        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
-        border-radius: 0; /* ไม่มีมุมโค้ง */
-        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+        color: #0f52ba;
+        background-color: transparent;
+        border-top: 3px solid #0f52ba;
+        border-bottom: 3px solid #0f52ba;
+        border-radius: 0;
+        padding: 10px 15px;
       }
 
       /* Media Queries */
       @media (min-width: 768px) {
         .section__container {
           max-width: 800px;
-          padding-top: 120px;
+          flex-direction: row; /* เรียงภาพและข้อความในแนวนอน */
+          text-align: left; /* จัดข้อความไปทางซ้าย */
+        }
+
+        .image {
+          margin: 0; /* ลบ margin ที่ไม่จำเป็น */
+          flex: 1; /* ใช้พื้นที่ครึ่งหนึ่ง */
+          display: flex;
+          justify-content: center; /* จัดรูปให้อยู่กึ่งกลางแนวนอน */
         }
 
         .image img {
           max-width: 400px;
+        }
+
+        .content {
+          flex: 1; /* ใช้พื้นที่ครึ่งหนึ่ง */
+          padding-left: 20px; /* เพิ่มระยะห่างระหว่างรูปและข้อความ */
         }
 
         .action__btns a {
@@ -152,11 +165,11 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a href="index.html" class="home">Home</a></li> <!-- หน้าหลัก -->
-          <li><a href="resume.html" class="resume">Resume</a></li> <!-- หน้าประวัติ -->
-          <li><a href="projects.html" class="projects">Projects</a></li> <!-- หน้าผลงาน -->
-          <li><a href="certificates.html" class="certificates">Certificates</a></li> <!-- หน้ารับรอง -->
-          <li><a href="contact.html" class="contact">Contact</a></li> <!-- หน้าติดต่อ -->
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href="resume.html" class="resume">Resume</a></li>
+          <li><a href="projects.html" class="projects">Projects</a></li>
+          <li><a href="certificates.html" class="certificates">Certificates</a></li>
+          <li><a href="contact.html" class="contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -179,19 +192,13 @@
         </div>
       </div>
     </section>
-    
-    <!-- เพิ่ม Script เพื่อทำการกำหนด active เมนู -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // ตรวจสอบ URL ปัจจุบัน
-        const currentPage = window.location.pathname.split("/").pop();
+      document.addEventListener('DOMContentLoaded', function () {
+        const currentPage = window.location.pathname.split('/').pop();
         const menuLinks = document.querySelectorAll('nav a');
-        
-        // ลูปผ่านทุกลิงก์ในเมนู
-        menuLinks.forEach(link => {
-          // เปรียบเทียบ URL กับ href ของแต่ละลิงก์
+        menuLinks.forEach((link) => {
           if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');  // เพิ่มคลาส active ให้กับลิงก์ที่ตรงกัน
+            link.classList.add('active');
           }
         });
       });
