@@ -64,9 +64,16 @@
       }
 
       /* จัดรูปภาพ */
-      .project__item img {
+      .project__images {
+        display: flex;
+        justify-content: center; /* จัดให้รูปภาพอยู่ตรงกลาง */
+        gap: 20px; /* ระยะห่างระหว่างรูป */
+        flex-wrap: wrap; /* อนุญาตให้รูปเปลี่ยนแถวได้เมื่อหน้าจอเล็ก */
+      }
+
+      .project__images img {
         width: 100%;
-        max-width: 600px;
+        max-width: 450px; /* ขนาดรูปไม่เกิน 450px */
         height: auto;
         margin: 10px 0;
         border: 1px solid #ddd;
@@ -108,6 +115,41 @@
         border-radius: 0; /* ไม่มีมุมโค้ง */
         padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
       }
+
+      /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .project__images img {
+          max-width: 500px; /* ขยายขนาดรูปภาพสำหรับหน้าจอใหญ่ */
+        }
+
+        .action__btns a {
+          padding: 15px 30px;
+          font-size: 1.2rem; /* เพิ่มขนาดปุ่ม */
+        }
+
+        .section__container {
+          padding-top: 160px; /* ปรับระยะห่างจากแถบเมนูในหน้าจอใหญ่ */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        h1 {
+          font-size: 3rem;
+        }
+
+        .project__images img {
+          max-width: 600px; /* ขนาดรูปที่ใหญ่ขึ้นอีก */
+        }
+
+        .action__btns a {
+          padding: 15px 35px;
+          font-size: 1.3rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -141,8 +183,10 @@
           </p>
           
           <!-- รูปภาพตอนรันโปรเจกต์ -->
-          <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
-          <img src="images/pizza2.png" alt="Pizza Ordering Simulation Output 2" />
+          <div class="project__images">
+            <img src="images/pizza1.png" alt="Pizza Ordering Simulation Output 1" />
+            <img src="images/pizza2.png" alt="Pizza Ordering Simulation Output 2" />
+          </div>
         </div>
 
         <!-- ปุ่ม Back และ Next -->
