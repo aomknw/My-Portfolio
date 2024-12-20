@@ -165,6 +165,16 @@
         border-radius: 0;
         padding: 10px 15px;
       }
+
+      /* เพิ่ม Media Query สำหรับหน้าจอเล็ก */
+      @media (max-width: 600px) {
+      .project__images img {
+        width: calc(50% - 10px); /* ปรับให้ใช้พื้นที่ 50% ของความกว้าง */
+        max-width: 100%; /* ทำให้รูปไม่เกินขนาด container */
+    }
+  }
+
+
     </style>
   </head>
   <body>
