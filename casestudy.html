@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>CaseStudy</title>
+    <title>Case Study</title>
     <style>
       body {
         margin: 0;
@@ -36,58 +36,56 @@
         margin-bottom: 40px;
       }
 
-      .casestudy__item {
+      .case__section {
         margin-bottom: 40px;
-        width: 100%;
         padding: 20px;
         border: 2px solid #ddd;
         border-radius: 12px;
         background-color: #ffffff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .casestudy__item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .casestudy__title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #0f52ba;
-        margin-bottom: 15px;
-      }
-
-      .casestudy__year {
-        font-size: 1rem;
-        color: #777;
-        margin-bottom: 10px;
-      }
-
-      .casestudy__description {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 20px;
-        line-height: 1.6;
-      }
-
-      .casestudy__details {
-        margin-top: 20px;
-        padding: 20px;
-        border: 2px dashed #ccc;
-        border-radius: 12px;
-        background-color: #f9f9f9;
         text-align: left;
       }
 
-      .casestudy__details img {
-        display: block;
-        margin: 0 auto 20px;
-        max-width: 80%;
+      .case__section h2 {
+        font-size: 1.8rem;
+        color: #0f52ba;
+        margin-bottom: 20px;
+      }
+
+      .case__section p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .case__images {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .case__images img {
+        width: calc(25% - 20px);
+        max-width: 200px;
+        height: auto;
+        margin: 10px 0;
         border: 1px solid #ddd;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: block;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .case__images img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 600px) {
+        .case__images img {
+          width: calc(50% - 10px);
+        }
       }
 
       .action__btns {
@@ -114,20 +112,6 @@
         background-color: #007bff;
       }
 
-      nav ul li a.active {
-        color: #0f52ba;
-        background-color: transparent;
-        border-top: 3px solid #0f52ba;
-        border-bottom: 3px solid #0f52ba;
-        border-radius: 0;
-        padding: 10px 15px;
-      }
-
-      @media (max-width: 600px) {
-        .casestudy__details img {
-          max-width: 100%;
-        }
-      }
     </style>
   </head>
   <body>
@@ -151,47 +135,81 @@
 
     <section class="section">
       <div class="section__container">
-        <h1>Case Studies</h1>
+        <h1>Case Study</h1>
 
-        <div class="casestudy__item">
-          <h2 class="casestudy__title">Table Now - Restaurant booking application</h2>
-          <p class="casestudy__year">2024 | UX/UI Designer</p>
-          <p class="casestudy__description">
-            Conducted comprehensive user research to identify pain points in the shopping experience. Implemented design changes that improved navigation and checkout flow, resulting in a 20% increase in conversion rates.
+        <div class="case__section">
+          <h2>Overview</h2>
+          <p>
+            This case study showcases a project aimed at creating a seamless
+            user experience for a movie ticket booking system, focusing on
+            functionality and usability.
           </p>
-          <div class="casestudy__details">
-            <img src="images/tbn1.png" alt="Table Now" />
-            <p>
-              This case study delves into how user feedback and A/B testing were leveraged to refine the online shopping experience. Key improvements included simplifying the product search interface and enhancing mobile responsiveness.
-            </p>
-          </div>
         </div>
 
-        <div class="casestudy__item">
-          <h2 class="casestudy__title">Healthcare App Development</h2>
-          <p class="casestudy__year">2023 | Product Designer</p>
-          <p class="casestudy__description">
-            Designed a healthcare mobile app focusing on patient-doctor communication. Created wireframes, prototypes, and conducted usability tests to ensure intuitive navigation.
+        <div class="case__section">
+          <h2>Goals</h2>
+          <p>
+            The primary goal was to enable users to book tickets efficiently
+            and manage showtime schedules through an intuitive design.
           </p>
-          <div class="casestudy__details">
-            <img src="images/healthcare.jpg" alt="Healthcare App" />
-            <p>
-              The app features secure messaging, appointment scheduling, and health record management. Emphasis was placed on data security and ease of use for non-technical users.
-            </p>
-          </div>
         </div>
 
-        <div class="casestudy__item">
-          <h2 class="casestudy__title">Smart Home Dashboard</h2>
-          <p class="casestudy__year">2022 | UI Developer</p>
-          <p class="casestudy__description">
-            Developed a smart home dashboard to control and monitor IoT devices. Designed an interface that supports real-time updates and voice commands.
+        <div class="case__section">
+          <h2>Problem Statement</h2>
+          <p>
+            Many users face challenges with traditional booking systems due to
+            complex workflows and lack of mobile-friendly designs. This system
+            aims to solve these issues by prioritizing ease of use.
           </p>
-          <div class="casestudy__details">
-            <img src="images/smarthome.jpg" alt="Smart Home Dashboard" />
-            <p>
-              This project involved integrating multiple APIs for seamless device control. The dashboard provides a comprehensive overview of energy usage, security, and device status.
-            </p>
+        </div>
+
+        <div class="case__section">
+          <h2>User Persona</h2>
+          <p>
+            The system was designed for tech-savvy individuals aged 20-40 who
+            frequently watch movies and prefer booking online for convenience.
+          </p>
+        </div>
+
+        <div class="case__section">
+          <h2>User Flow</h2>
+          <p>
+            The user flow begins with selecting a movie, choosing a preferred
+            showtime, reserving seats, and completing the payment process.
+          </p>
+        </div>
+
+        <div class="case__section">
+          <h2>Key Features</h2>
+          <p>
+            - Movie search and filtering options<br />
+            - Real-time seat availability updates<br />
+            - Multiple payment gateways<br />
+            - Member rewards system for loyal customers
+          </p>
+        </div>
+
+        <div class="case__section">
+          <h2>Typography & Color Palette</h2>
+          <p>
+            Typography: Arial, sans-serif<br />
+            Primary Color: #0f52ba<br />
+            Secondary Color: #007bff<br />
+            Background Color: #f7f7f7<br />
+          </p>
+        </div>
+
+        <div class="case__section">
+          <h2>System Screenshots</h2>
+          <div class="case__images">
+            <img src="images/case1.png" alt="Case Study Screenshot 1" />
+            <img src="images/case2.png" alt="Case Study Screenshot 2" />
+            <img src="images/case3.png" alt="Case Study Screenshot 3" />
+            <img src="images/case4.png" alt="Case Study Screenshot 4" />
+            <img src="images/case5.png" alt="Case Study Screenshot 5" />
+            <img src="images/case6.png" alt="Case Study Screenshot 6" />
+            <img src="images/case7.png" alt="Case Study Screenshot 7" />
+            <img src="images/case8.png" alt="Case Study Screenshot 8" />
           </div>
         </div>
 
