@@ -133,12 +133,12 @@
         background-color: #007bff;
       }
 
-      /* จัดสไตล์ปุ่ม */
+      /* จัดรูปแบบปุ่ม */
       .action__btns {
         display: flex;
-        justify-content: center; /* จัดให้ปุ่มอยู่ซ้าย-ขวา */
-        gap: 20px; /* เพิ่มช่องว่างระหว่างปุ่ม */
-        margin-top: 40px;
+        justify-content: center;
+        margin-top: 55px;
+        gap: 20px;
       }
 
       .action__btns a {
@@ -157,13 +157,38 @@
       .action__btns a:hover {
         background-color: #007bff;
       }
+
+       /* กรอบและการเปลี่ยนสีของเมนูที่เลือก */
       nav ul li a.active {
-        color: #0f52ba;
-        background-color: transparent;
-        border-top: 3px solid #0f52ba;
-        border-bottom: 3px solid #0f52ba;
-        border-radius: 0;
-        padding: 10px 15px;
+        color: #0f52ba; /* เปลี่ยนสีตัวอักษรให้เป็นสีฟ้าเดียวกับกรอบ */
+        background-color: transparent; /* ไม่มีพื้นหลัง */
+        border-top: 3px solid #0f52ba;  /* กรอบบน */
+        border-bottom: 3px solid #0f52ba; /* กรอบล่าง */
+        border-radius: 0; /* ไม่มีมุมโค้ง */
+        padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+      }
+      /* Media Queries */
+      @media (min-width: 768px) {
+        .section__container {
+          max-width: 800px;
+          padding-top: 120px;
+        }
+
+        .action__btns a {
+          padding: 15px 30px;
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section__container {
+          max-width: 1000px;
+        }
+
+        .action__btns a {
+          padding: 15px 35px;
+          font-size: 1.3rem;
+        }
       }
 
       /* เพิ่ม Media Query สำหรับหน้าจอเล็ก */
