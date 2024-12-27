@@ -1,3 +1,7 @@
+Share
+
+
+You said:
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -138,19 +142,12 @@
         border: 2px solid #ddd;
       }
 
-      .case__navigation {
-        margin-top: 40px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 400px;
-      }
-
+      /* จัดสไตล์ปุ่ม */
       .action__btns {
         display: flex;
         justify-content: center;
-        margin-top: 55px;
         gap: 20px;
+        margin-top: 40px;
       }
 
       .action__btns a {
@@ -170,6 +167,7 @@
         background-color: #007bff;
       }
 
+
       nav ul li a.active {
         color: #0f52ba;
         background-color: transparent;
@@ -187,30 +185,6 @@
         }
       }
 
-         /* Media Queries */
-      @media (min-width: 768px) {
-        .section__container {
-          max-width: 800px;
-          padding-top: 120px;
-        }
-
-        .action__btns a {
-          padding: 15px 30px;
-          font-size: 1.2rem;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .section__container {
-          max-width: 1000px;
-        }
-
-        .action__btns a {
-          padding: 15px 35px;
-          font-size: 1.3rem;
-        }
-      }
-      
     </style>
   </head>
   <body>
@@ -335,18 +309,13 @@
             <img src="images/btn8.png" alt="Case Study Image 8" />
           </div>
         </div>
-      </div>
-                
-        <!-- ปุ่ม Next และ Back -->
-        <div class="btn__container">
-          <a href="projects.html" class="btn">Back</a>
-          <a href="certificates.html" class="btn">Next</a>
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
 
+          <!-- ปุ่ม Back และ Next -->
+        <div class="action__btns">
+          <a href="projects.html" class="back">Back</a>
+          <a href="certificates.html" class="next">Next</a>
+        </div>
+        </div>
       </div>
     </section>
   </body>
