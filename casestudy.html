@@ -146,28 +146,29 @@
         max-width: 400px;
       }
 
-      .nav__btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-        font-weight: bold;
+      /* จัดรูปแบบปุ่ม */
+      .action__btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 55px;
+        gap: 20px;
+      }
+
+      .action__btns a {
         text-decoration: none;
-        text-align: center;
+        font-size: 1rem;
         color: white;
         background-color: #0f52ba;
+        padding: 12px 30px;
         border-radius: 5px;
         transition: background-color 0.3s;
+        width: auto;
+        min-width: 150px;
+        text-align: center;
       }
 
-      .nav__btn:hover {
+      .action__btns a:hover {
         background-color: #007bff;
-      }
-
-      .back__btn {
-        background-color: #898989;
-      }
-
-      .back__btn:hover {
-        background-color: #5B5B5B;
       }
 
 
