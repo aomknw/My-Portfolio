@@ -29,7 +29,7 @@
         justify-content: flex-start;
         min-height: 100vh;
         text-align: center;
-        padding-top: 140px; /* เพิ่มระยะห่างจากแถบเมนู */
+        padding-top: 140px;
       }
 
       /* จัดรูปแบบหัวข้อ */
@@ -43,6 +43,11 @@
       .certificate {
         margin-bottom: 40px;
         width: 100%;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       /* จัดรูปภาพให้อยู่ตรงกลางและปรับขนาด */
@@ -50,10 +55,11 @@
         width: 100%;
         max-width: 600px;
         height: auto;
-        border: 1px solid #ddd;
+        border: 1px solid #ccc;
         border-radius: 8px;
         margin: 20px auto;
         display: block;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       /* จัดหัวข้อใบประกาศนียบัตร */
@@ -68,6 +74,8 @@
         font-size: 1rem;
         color: #555;
         line-height: 1.5;
+        margin: 0;
+        padding: 5px;
       }
 
       /* จัดสไตล์ปุ่ม */
@@ -104,7 +112,6 @@
         border-radius: 0; /* ไม่มีมุมโค้ง */
         padding: 10px 15px; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
       }
-
 
       /* Media Queries สำหรับหน้าจอที่ใหญ่ขึ้น */
       @media (min-width: 768px) {
@@ -145,17 +152,6 @@
           font-size: 1.3rem;
         }
       }
-
-      /* Media Queries เฉพาะ iPad แนวตั้ง */
-      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-        .certificate img {
-          max-width: 500px;
-        }
-
-        .action__btns {
-          flex-direction: row; /* ปุ่มเรียงในแนวนอน */
-        }
-      }
     </style>
   </head>
   <body>
@@ -171,7 +167,7 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="casestudy.html">CaseStudy</a></li>
-          <li><a href="certificates.html" class="active">Certificates</a></li> <!-- เพิ่ม active -->
+          <li><a href="certificates.html" class="active">Certificates</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -180,7 +176,7 @@
     <section class="section">
       <div class="section__container">
         <h1>Certificates</h1>
-
+        
         <!-- ใบประกาศนียบัตรที่ 1 -->
         <div class="certificate">
           <h2>FutureTech Program</h2>
